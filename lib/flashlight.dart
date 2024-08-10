@@ -22,7 +22,7 @@ class _FlashLightAppState extends State<FlashLightApp> with TickerProviderStateM
       shape: BoxShape.circle,
       boxShadow: [
         BoxShadow(
-          color: Colors.white.withOpacity(1.0), // White glow when not clicked
+          color: Colors.white.withOpacity(1.0),
           spreadRadius: 15,
           blurRadius: 30,
           offset: Offset(0.0, 0.0),
@@ -35,7 +35,7 @@ class _FlashLightAppState extends State<FlashLightApp> with TickerProviderStateM
       shape: BoxShape.circle,
       boxShadow: [
         BoxShadow(
-          color: Colors.red.withOpacity(1.0), // Red glow when clicked
+          color: Colors.red.withOpacity(1.0),
           spreadRadius: 30,
           blurRadius: 60,
           offset: Offset(0.0, 0.0),
@@ -48,7 +48,7 @@ class _FlashLightAppState extends State<FlashLightApp> with TickerProviderStateM
   @override
   void initState() {
     super.initState();
-    _requestPermission(); // Request camera permission
+    _requestPermission();
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
@@ -103,8 +103,8 @@ class _FlashLightAppState extends State<FlashLightApp> with TickerProviderStateM
                   position: DecorationPosition.background,
                   decoration: decorationTween.animate(animationController),
                   child: SizedBox(
-                    width: 120,
-                    height: 120,
+                    width: 220,
+                    height: 220,
                     child: Stack(
                       children: [
                         Center(
@@ -129,7 +129,7 @@ class _FlashLightAppState extends State<FlashLightApp> with TickerProviderStateM
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height / 1.4,
+              height: MediaQuery.of(context).size.height / 1.3,
               alignment: Alignment.bottomCenter,
               child: AnimatedDefaultTextStyle(
                 curve: Curves.ease,

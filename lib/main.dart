@@ -6,8 +6,8 @@ import 'flashlight.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor: Color(0xff03012c), // Navigation bar color
-    systemNavigationBarIconBrightness: Brightness.light, // Icon brightness
+    systemNavigationBarColor: Color(0xff03012c),
+    systemNavigationBarIconBrightness: Brightness.light,
   ));
   TorchController().initialize();
   runApp(MyApp());
